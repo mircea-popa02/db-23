@@ -30,47 +30,15 @@ export default class Bike {
   }
 
   setPlateforme10Model() {
-    const textureBuildings = this.resources.items.textureBuildings
-    textureBuildings.flipY = false
-    textureBuildings.encoding = THREE.sRGBEncoding
-    const materialBuildings = new THREE.MeshBasicMaterial({ map: textureBuildings })
-
-    const textureMdba = this.resources.items.textureMdba
-    textureMdba.flipY = false
-    textureMdba.encoding = THREE.sRGBEncoding
-    const materialMdba = new THREE.MeshBasicMaterial({ map: textureMdba })
-
-    const textureMudacDetails = this.resources.items.textureMudacDetails
-    textureMudacDetails.flipY = false
-    textureMudacDetails.encoding = THREE.sRGBEncoding
-    const materialMudacDetails = new THREE.MeshBasicMaterial({ map: textureMudacDetails })
-
-    const textureTerrain = this.resources.items.textureTerrain
-    textureTerrain.flipY = false
-    textureTerrain.encoding = THREE.sRGBEncoding
-    const materialTerrain = new THREE.MeshBasicMaterial({ map: textureTerrain })
-
-    const lightPanelTexture = new THREE.MeshBasicMaterial({ color: 0xffffe5 })
+    const monkyTexture = this.resources.items.monkyTexture
+    monkyTexture.flipY = false
+    monkyTexture.encoding = THREE.sRGBEncoding
+    const materialMonky = new THREE.MeshBasicMaterial({ map: monkyTexture })
 
     this.actualPlateforme10.traverse((child) => {
-      if(child.name.match(/^mdba.*$/)) {
-        child.material = materialMdba
-      }
-
-      if(child.name.match(/^mudac.*$/)) {
-        child.material = materialMudacDetails
-      }
-
-      if(child.name.match(/^terrain.*$/)) {
-        child.material = materialTerrain
-      }
-
-      if(child.name.match(/^buildings.*$/)) {
-        child.material = materialBuildings
-      }
-
-      if(child.name.match(/^lightPanel.*$/)) {
-        child.material = lightPanelTexture
+      if (child.isMesh) {
+        child.material = materialMonky
+        child.scale.set(11, 1, 8) // Make the mesh bigger
       }
     })
 

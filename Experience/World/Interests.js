@@ -40,15 +40,15 @@ export default class Interests {
   setInterests() {
     this.points = [
       {
-        position: new THREE.Vector3(2.62, 1.2, 0.9),
+        position: new THREE.Vector3(2.62, 0.17, 0.9),
         element: document.querySelector('.mcba')
       },
       {
-        position: new THREE.Vector3(-3.75, 1.2, 0.25),
+        position: new THREE.Vector3(-3.75, 0.17, 0.25),
         element: document.querySelector('.mudac')
       },
       {
-        position: new THREE.Vector3(-3.75, 1.2, -1.55),
+        position: new THREE.Vector3(-3.75, 0.17, -1.55),
         element: document.querySelector('.elysee')
       },
       {
@@ -161,7 +161,7 @@ export default class Interests {
           '+41 21 316 34 45',
           'mcba@plateforme10.ch'
         ],
-        'website': 'https://www.mcba.ch/en/'
+        'website': 'http://localhost:3000/'
       },
       {
         'image': '/images/img-mudac.jpg',
@@ -184,7 +184,7 @@ export default class Interests {
           '+41 21 318 44 00',
           'mudac@plateforme10.ch'
         ],
-        'website': 'https://mudac.ch/en/'
+        'website': 'http://localhost:3000/'
       },
       {
         'image': '/images/img-elysee.jpg',
@@ -206,7 +206,7 @@ export default class Interests {
           '+41 21 318 44 00',
           'info@elysee.ch'
         ],
-        'website': 'https://elysee.ch/en'
+        'website': 'http://localhost:3000/'
       },
       // Restaurants & Cafés
       {
@@ -229,7 +229,7 @@ export default class Interests {
           '+41 21 318 44 10',
           'info@arcadiarestaurant.ch'
         ],
-        'website': 'https://www.arcadiarestaurant.ch/'
+        'website': 'http://localhost:3000/'
       },
       {
         'image': '/images/img-nabi.jpg',
@@ -250,7 +250,7 @@ export default class Interests {
           '+41 21 311 02 90',
           'info@lenabi.ch'
         ],
-        'website': 'https://www.mcba.ch/en/cafe-restaurant-2/'
+        'website': 'http://localhost:3000/'
       },
       {
         'image': '/images/img-lumen.jpg',
@@ -271,7 +271,7 @@ export default class Interests {
           '+41 21 311 02 90',
           'info@cafelumen.ch'
         ],
-        'website': 'https://mudac.ch/de/cafe-lumen/'
+        'website': 'http://localhost:3000/'
       }
     ]
 

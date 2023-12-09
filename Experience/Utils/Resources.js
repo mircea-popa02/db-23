@@ -13,7 +13,7 @@ export default class Resources extends EventEmitter {
     this.assets = assets
 
     this.items = {}
-    this.queue = this.assets.length
+    this.queue = 2
     this.loaded = 0
     this.loadingProgress = document.querySelector('.loading-progress')
 
@@ -60,6 +60,7 @@ export default class Resources extends EventEmitter {
   singleAssetLoaded(asset, file) {
     this.items[asset.name] = file
     this.loaded++
+    console.log(this.loaded)
 
     if (this.loaded === this.queue) {
       this.emit('ready')
